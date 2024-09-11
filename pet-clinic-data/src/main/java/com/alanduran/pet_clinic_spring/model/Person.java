@@ -1,4 +1,4 @@
-package com.alanduran.pet_clinic_string.model;
+package com.alanduran.pet_clinic_spring.model;
 
 public class Person {
     private String firstName;
