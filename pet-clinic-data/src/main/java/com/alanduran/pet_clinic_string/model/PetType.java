@@ -1,4 +1,4 @@
-package com.alanduran.pet_clinic_spring.model;
+package com.alanduran.pet_clinic_string.model;
 
 public class PetType {
     private String name;

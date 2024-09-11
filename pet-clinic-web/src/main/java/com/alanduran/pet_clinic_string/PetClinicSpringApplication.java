@@ -1,4 +1,4 @@
-package com.alanduran.pet_clinic_spring;
+package com.alanduran.pet_clinic_string;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
