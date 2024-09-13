@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.alanduran</groupId>
 	<artifactId>pet-clinic-spring</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>pet-clinic-spring</name>
 	<description>This project was generated for the course Spring Framework Beginner to Guru</description>
@@ -26,7 +26,7 @@
 	</modules>
 	<scm>
 		<connection>scm:git:https://github.com/AlanDuran17/pet-clinic-spring.git</connection>
-	  <tag>pet-clinic-spring-0.0.2</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<properties>
 		<java.version>17</java.version>
