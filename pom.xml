@@ -26,7 +26,7 @@
 		<module>pet-clinic-web</module>
 	</modules>
 	<scm>
-		<developerConnection>scm:git:git@github.com:AlanDuran17/pet-clinic-spring.git</developerConnection>
+		<connection>scm:git:https://github.com/AlanDuran17/pet-clinic-spring.git</connection>
 	</scm>
 	<properties>
 		<java.version>17</java.version>
