@@ -1,6 +1,6 @@
 package com.alanduran.pet_clinic_spring.model;
 
-public class PetType {
+public class PetType extends BaseEntity {
     private String name;
 
     public String getName() {
