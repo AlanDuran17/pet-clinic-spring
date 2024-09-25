@@ -1,5 +1,8 @@
 package com.alanduran.pet_clinic_spring.model;
 
+import lombok.ToString;
+
+@ToString
 public class Person extends BaseEntity {
     private String firstName;
     private String lastName;
