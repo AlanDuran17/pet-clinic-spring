@@ -1,10 +1,7 @@
 package com.alanduran.pet_clinic_spring.bootstrap;
 
 import com.alanduran.pet_clinic_spring.model.*;
-import com.alanduran.pet_clinic_spring.services.OwnerService;
-import com.alanduran.pet_clinic_spring.services.PetTypeService;
-import com.alanduran.pet_clinic_spring.services.SpecialtyService;
-import com.alanduran.pet_clinic_spring.services.VetService;
+import com.alanduran.pet_clinic_spring.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,14 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -89,6 +88,14 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner2);
 
         System.out.println("Loaded owners: " + ownerService.findAll());
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(jansPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Went to Angela's house");
+        visitService.save(catVisit);
+
+        System.out.println("Loaded visits: " + visitService.findAll());
 
         Vet vet1 = new Vet();
         vet1.setFirstName("John");
