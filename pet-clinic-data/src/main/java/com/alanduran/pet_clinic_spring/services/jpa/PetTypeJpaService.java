@@ -3,10 +3,14 @@ package com.alanduran.pet_clinic_spring.services.jpa;
 import com.alanduran.pet_clinic_spring.model.PetType;
 import com.alanduran.pet_clinic_spring.repositories.PetTypeRepository;
 import com.alanduran.pet_clinic_spring.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("jpa")
 public class PetTypeJpaService implements PetTypeService {
 
     private final PetTypeRepository petTypeRepository;
