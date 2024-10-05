@@ -1,43 +1,28 @@
 package com.alanduran.pet_clinic_spring.model;
 
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
+@Entity
+@Table
 public class Pet extends BaseEntity {
 
-    private PetType petType;
-    private Owner owner;
-    private LocalDate birthDate;
+    @Column(name = "name")
     private String name;
 
-    public PetType getPetType() {
-        return petType;
-    }
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private PetType petType;
 
-    public void setPetType(PetType petType) {
-        this.petType = petType;
-    }
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
 
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
 }
