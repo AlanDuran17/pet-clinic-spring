@@ -2,18 +2,18 @@ package com.alanduran.pet_clinic_spring.services.map;
 
 import com.alanduran.pet_clinic_spring.model.Specialty;
 import com.alanduran.pet_clinic_spring.model.Vet;
-import com.alanduran.pet_clinic_spring.services.SpecialtiesService;
+import com.alanduran.pet_clinic_spring.services.SpecialtyService;
 import com.alanduran.pet_clinic_spring.services.VetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
-    private final SpecialtiesService specialtyService;
+    private final SpecialtyService specialtyService;
 
-    public VetServiceMap(SpecialtiesService specialtyService) {
+    public VetMapService(SpecialtyService specialtyService) {
         this.specialtyService = specialtyService;
     }
 

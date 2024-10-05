@@ -1,13 +1,13 @@
 package com.alanduran.pet_clinic_spring.services.map;
 
 import com.alanduran.pet_clinic_spring.model.Specialty;
-import com.alanduran.pet_clinic_spring.services.SpecialtiesService;
+import com.alanduran.pet_clinic_spring.services.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();
